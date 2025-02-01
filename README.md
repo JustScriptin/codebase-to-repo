@@ -1,6 +1,6 @@
 # Combine Codebase Script
 
-**Script Name**: `combine_codebase.sh`  
+**Script Name**: `repo-file.sh`  
 **Description**:  
 This Bash script combines your project’s folder structure and file contents (filtered by file extensions and exclusion lists) into a single timestamped text file. It is particularly useful when you want to share or inspect your entire codebase in one file—minus large auto-generated folders (e.g., `node_modules`) and config files you don’t want to include (e.g., `.env`).
 
