@@ -2,7 +2,7 @@
 
 **Script Name**: `repo-file.sh`  
 **Description**:  
-This Bash script combines your project’s folder structure and file contents (filtered by file extensions and exclusion lists) into a single timestamped text file. It is particularly useful when you want to share or inspect your entire codebase in one file—minus large auto-generated folders (e.g., `node_modules`) and config files you don’t want to include (e.g., `.env`).
+This Bash script combines your project's folder structure and file contents (filtered by file extensions and exclusion lists) into a single timestamped text file. It is particularly useful when you want to share or inspect your entire codebase in one file—minus large auto-generated folders (e.g., `node_modules`) and config files you don't want to include (e.g., `.env`).
 
 ## Table of Contents
 1. [Features](#features)  
@@ -15,7 +15,7 @@ This Bash script combines your project’s folder structure and file contents (f
 8. [License](#license)  
 
 ## Features
-- Recursively generates a “tree” representation of your directories.
+- Recursively generates a "tree" representation of your directories.
 - Excludes specified directories (e.g., `node_modules`, `.git`) from both the tree and the final output.
 - Excludes certain files (e.g., `.env`) from the final output.
 - Allows inclusion of only specific file extensions (e.g., `js`, `ts`, `md`) or exact file names (like `Dockerfile`).
@@ -27,10 +27,10 @@ This Bash script combines your project’s folder structure and file contents (f
 
 ## Installation
 1. Clone or download this repository.
-2. Place `combine_codebase.sh` in your project’s root directory (or wherever you want to run it).
+2. Place `repo-file.sh` in your project's root directory (or wherever you want to run it).
 3. *(Optional)* If the script is not executable, grant permissions:
    ```bash
-   chmod +x combine_codebase.sh
+   chmod +x repo-file.sh
    ```
 
 ## Usage
@@ -41,7 +41,7 @@ This Bash script combines your project’s folder structure and file contents (f
    ```
 3. Run the script:
    ```bash
-   ./combine_codebase.sh
+   ./repo-file.sh
    ```
    On Windows (with Git Bash or WSL), the same command should work.
 
@@ -52,13 +52,13 @@ This Bash script combines your project’s folder structure and file contents (f
 - The script creates a file named `combined_YYYYMMDD_HHMMSS.txt` (where `YYYYMMDD_HHMMSS` is the timestamp).
 - This file contains:
   1. **CODEBASE FOLDER STRUCTURE**: A tree-like visualization of your folders.
-  2. **CODEBASE FILES WITH THEIR RESPECTIVE PATHS**: A concatenation of all the allowed files’ contents, prefixed by a header indicating each file’s relative path.
+  2. **CODEBASE FILES WITH THEIR RESPECTIVE PATHS**: A concatenation of all the allowed files' contents, prefixed by a header indicating each file's relative path.
 
 ## Customization
-- **Excluded Directories**: Edit the array named `excluded_dirs` inside `combine_codebase.sh` to add or remove directories you don’t want to include in the final output.
+- **Excluded Directories**: Edit the array named `excluded_dirs` inside `repo-file.sh` to add or remove directories you don't want to include in the final output.
 - **Excluded Files**: Update `excluded_files` with any filenames you wish to skip.
 - **Allowed Extensions**: Modify the `allowed_extensions` array to include or exclude particular file types (e.g., `js`, `jsx`, `ts`, `tsx`, etc.).
-- **Dockerfile Inclusion**: The script explicitly checks for files named `Dockerfile` and includes them; remove this check if you don’t need it.
+- **Dockerfile Inclusion**: The script explicitly checks for files named `Dockerfile` and includes them; remove this check if you don't need it.
 
 ## Contributing
 1. **Fork** this repository.
